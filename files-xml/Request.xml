@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GetCustomerDetailRequest
+        xmlns="http://jvsiqueira.com.br"
+        xsi:schemaLocation="http://jvsiqueira.com.br cliente.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>1</id>
+</GetCustomerDetailRequest>
+
