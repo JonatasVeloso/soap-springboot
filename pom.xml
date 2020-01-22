@@ -61,14 +61,16 @@
 
 	<build>
 		<plugins>
+		
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
-				<version>2.5.0</version>
+				<version>1.6.0</version>
 				<executions>
 					<execution>
 						<id>xjc</id>
@@ -78,9 +80,9 @@
 					</execution>
 				</executions>
 				<configuration>
-					<sources>
-						<source>${project.basedir}/src/main/resources/</source>
-					</sources>
+					<shemaDirectory>${project.basedir}/src/main/resources</shemaDirectory>
+					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+					<clearOutputDir>false</clearOutputDir>
 				</configuration>
 			</plugin>
 		</plugins>
