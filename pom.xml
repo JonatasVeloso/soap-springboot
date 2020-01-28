@@ -34,12 +34,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
 		</dependency>
-		<!-- MY SQL -->
+		<!-- MY SQL 
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
-		</dependency>
+		</dependency>-->
 		<!--  -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -84,15 +84,7 @@
 						<source>${project.basedir}/src/main/resources/xsd/</source>
 					</sources>
 				</configuration>
-			</plugin>
-			
-			
-				<!-- <configuration>
-					<shemaDirectory>${project.basedir}/src/main/resources</shemaDirectory>
-					<outputDirectory>${project.basedir}/src/main/java/br/com/jvsiqueira/soapspringboot/xsd</outputDirectory>
-					<clearOutputDir>false</clearOutputDir>
-				</configuration> -->
-				
+			</plugin>				
 		</plugins>
 	</build>
 
