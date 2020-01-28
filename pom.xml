@@ -70,7 +70,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
-				<version>1.6.0</version>
+				<version>2.5.0</version>
 				<executions>
 					<execution>
 						<id>xjc</id>
@@ -80,11 +80,19 @@
 					</execution>
 				</executions>
 				<configuration>
-					<shemaDirectory>${project.basedir}/src/main/resources</shemaDirectory>
-					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-					<clearOutputDir>false</clearOutputDir>
+					<sources>
+						<source>${project.basedir}/src/main/resources/xsd/</source>
+					</sources>
 				</configuration>
 			</plugin>
+			
+			
+				<!-- <configuration>
+					<shemaDirectory>${project.basedir}/src/main/resources</shemaDirectory>
+					<outputDirectory>${project.basedir}/src/main/java/br/com/jvsiqueira/soapspringboot/xsd</outputDirectory>
+					<clearOutputDir>false</clearOutputDir>
+				</configuration> -->
+				
 		</plugins>
 	</build>
 

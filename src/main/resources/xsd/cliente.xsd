@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://jvsiqueira.com.br"
         xmlns:tns="http://jvsiqueira.com.br"
         elementFormDefault="qualified">
@@ -36,4 +35,4 @@
    				<xs:element name="email" type="xs:string"/>
    			</xs:sequence>
    		</xs:complexType>
-</schema>
+</xs:schema>
