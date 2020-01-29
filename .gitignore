@@ -29,3 +29,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### WSDL ###
+/src/main/java/br/com/jvsiqueira/soapspringboot/xsd/
+/src/main/java/META-INF/

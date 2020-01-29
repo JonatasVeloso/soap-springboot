@@ -83,6 +83,9 @@
 					<sources>
 						<source>${project.basedir}/src/main/resources/xsd/</source>
 					</sources>
+					<outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
+					<clearOutputDir>false</clearOutputDir>
+					<!--  -->
 				</configuration>
 			</plugin>				
 		</plugins>
