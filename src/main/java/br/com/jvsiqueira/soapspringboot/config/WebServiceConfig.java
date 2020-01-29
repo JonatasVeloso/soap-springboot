@@ -34,6 +34,8 @@ public class WebServiceConfig extends WsConfigurerAdapter{
 		DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
 		definition.setPortTypeName("CustomerPort");
 		definition.setTargetNamespace("http://jvsiqueira.com.br");
+		definition.setLocationUri("/ws");
+		definition.setSchema(customerSchema);
 		return definition;
 	}
 	
