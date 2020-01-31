@@ -29,11 +29,11 @@ public class WebServiceConfig extends WsConfigurerAdapter{
 		return new SimpleXsdSchema(new ClassPathResource("xsd/cliente.xsd"));
 	}
 	
-	@Bean(name="customers")
+	@Bean(name="customers") // localhost:8080/ws/customers.wsdl
 	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema customerSchema) {
 		DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
 		definition.setPortTypeName("CustomerPort");
-		definition.setTargetNamespace("http://jvsiqueira.com.br");
+		definition.setTargetNamespace("http://xsd.soapspringboot.jvsiqueira.com.br");
 		definition.setLocationUri("/ws");
 		definition.setSchema(customerSchema);
 		return definition;
