@@ -9,6 +9,7 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import br.com.jvsiqueira.soapspringboot.bean.Customer;
+import br.com.jvsiqueira.soapspringboot.exception.CustomerNotFOundException;
 import br.com.jvsiqueira.soapspringboot.services.CustomerDetailService;
 import br.com.jvsiqueira.soapspringboot.xsd.CustomerDetail;
 import br.com.jvsiqueira.soapspringboot.xsd.DeleteCustomerRequest;
@@ -28,10 +29,10 @@ public class CustomerDetailEndPoint {
 	
 	@PayloadRoot(namespace="http://xsd.soapspringboot.jvsiqueira.com.br", localPart="GetCustomerDetailRequest")
 	@ResponsePayload
-	public GetCustomerDetailResponse processCustimerDetail(@RequestPayload GetCustomerDetailRequest req) throws Exception {
+	public GetCustomerDetailResponse processCustimerDetail(@RequestPayload GetCustomerDetailRequest req) throws RuntimeException {
 		Customer customer = customerDetailService.findById(req.getId());
 		if(customer == null) {
-			throw new Exception("Invalid Customer id" + req.getId());
+			throw new CustomerNotFOundException("Invalid Customer id: " + req.getId());
 		}
 		return convertToGetCustomerDetailResponse(customer);
 	}
